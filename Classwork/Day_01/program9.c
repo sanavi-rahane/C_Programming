@@ -13,6 +13,7 @@
     START
         Accept first number as no1
         Accept second number as no2
+        If the input is negative then convert it into positive
         Perform Addition of no1 & no2
         Display the addition on screen
     STOP
@@ -23,7 +24,20 @@
 float AdditionTwoNumbers(float fNo1, float fNo2)
 {
     float fSum = 0.0f;
+
+    // Updator
+    if(fNo1 < 0.0f)
+    {
+        fNo1 = -fNo1;
+    }
+
+    if(fNo2 < 0.0f)
+    {
+        fNo2 = -fNo2;
+    }
+
     fSum = fNo1 + fNo2;    // Business Logic
+    
     return fSum;
 }
 
